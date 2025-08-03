@@ -18,11 +18,12 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-// ✅ Run only after DOM is loaded
+// ✅ Wait for DOM to load before running
 window.addEventListener("DOMContentLoaded", () => {
   const googleBtn = document.getElementById("google-login");
   const fbBtn = document.getElementById("facebook-login");
 
+  // ✅ Google Login
   if (googleBtn) {
     googleBtn.addEventListener("click", () => {
       signInWithPopup(auth, provider)
@@ -40,17 +41,18 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ✅ Facebook Login
   if (fbBtn) {
     fbBtn.addEventListener("click", () => {
       FB.login((response) => {
         if (response.authResponse) {
-          FB.api('/me', { fields: 'name,email' }, (userData) => {
+          FB.api("/me", { fields: "name,email" }, (userData) => {
             alert(`Welcome, ${userData.name} (Facebook)!`);
           });
         } else {
           alert("Facebook Login failed or cancelled.");
         }
-      }, { scope: 'email' });
+      }, { scope: "email" });
     });
   }
 });
