@@ -30,6 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
         .then((result) => {
           const user = result.user;
           alert(`Welcome, ${user.displayName} (Google)!`);
+          window.location.href = "home.html";
         })
         .catch((error) => {
           if (error.code === "auth/popup-blocked") {
