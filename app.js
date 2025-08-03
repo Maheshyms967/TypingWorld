@@ -1,4 +1,4 @@
-// Firebase v12 Modular Imports
+// Firebase Modular Imports
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 import { getAuth, signInWithPopup, signInWithRedirect, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
@@ -7,7 +7,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyDzYQHvr6a2M7lIV1Xqc2DrsZ7qYRNMibA",
   authDomain: "typingworld-c5376.firebaseapp.com",
   projectId: "typingworld-c5376",
-  storageBucket: "typingworld-c5376.appspot.com", // 🔧 fixed typo (was .app)
+  storageBucket: "typingworld-c5376.appspot.com", // Fixed typo
   messagingSenderId: "1012172332773",
   appId: "1:1012172332773:web:f07fc1ee742b4387bdfe0c",
   measurementId: "G-E9CQVF4BSX"
@@ -17,10 +17,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Wait until DOM is loaded
-document.addEventListener("DOMContentLoaded", () => {
+// ✅ Now safely access buttons after full load
+window.addEventListener("load", () => {
   const googleBtn = document.getElementById("google-login");
   const fbBtn = document.getElementById("facebook-login");
+
+  console.log("✅ All DOM elements are loaded");
 
   // ✅ Google Login
   if (googleBtn) {
@@ -41,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ✅ Facebook Login (using Facebook SDK)
+  // ✅ Facebook Login
   if (fbBtn) {
     fbBtn.addEventListener("click", () => {
       FB.login((response) => {
