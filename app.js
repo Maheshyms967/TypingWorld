@@ -2,16 +2,17 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 import { getAuth, signInWithPopup, signInWithRedirect, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-// 🔐 Firebase Config
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDuR-xMdggTl6XdKjp6cHvu10j2-lGw1f0",
   authDomain: "typingworld-c5376.firebaseapp.com",
   projectId: "typingworld-c5376",
-  storageBucket: "typingworld-c5376.appspot.com",
+  storageBucket: "typingworld-c5376.firebasestorage.app",
   messagingSenderId: "1012172332773",
   appId: "1:1012172332773:web:f07fc1ee742b4387bdfe0c",
   measurementId: "G-E9CQVF4BSX"
 };
+
 
 // 🔧 Initialize Firebase
 const app = initializeApp(firebaseConfig);
