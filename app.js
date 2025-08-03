@@ -7,7 +7,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyDuR-xMdggTl6XdKjp6cHvu10j2-lGw1f0",
   authDomain: "typingworld-c5376.firebaseapp.com",
   projectId: "typingworld-c5376",
-  storageBucket: "typingworld-c5376.firebasestorage.app",
+  storageBucket: "typingworld-c5376.appspot.com",
   messagingSenderId: "1012172332773",
   appId: "1:1012172332773:web:f07fc1ee742b4387bdfe0c",
   measurementId: "G-E9CQVF4BSX"
