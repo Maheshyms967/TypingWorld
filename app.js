@@ -4,7 +4,7 @@ import { getAuth, signInWithPopup, signInWithRedirect, GoogleAuthProvider } from
 
 // 🔐 Firebase Config
 const firebaseConfig = {
-  apiKey: "AIzaSyCV3K6GST5-2Owc8WQlbP0ADbUwve0WZFo",
+  apiKey: "AIzaSyDuR-xMdggTl6XdKjp6cHvu10j2-lGw1f0",
   authDomain: "typingworld-c5376.firebaseapp.com",
   projectId: "typingworld-c5376",
   storageBucket: "typingworld-c5376.appspot.com",
